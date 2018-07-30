@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bkk.android.android_bake1">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -22,6 +23,33 @@
 
 
         <activity android:name=".DetailActivity" />
+
+
+        <!--For UpdateBackingService.java-->
+        <service android:name=".WidgetStuff.UpdateBakingService" />
+
+        <!--For Widget-->
+        <service
+            android:name=".WidgetStuff.GridWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+
+        <!--For Widget-->
+        <receiver
+            android:name=".WidgetStuff.BakingWidgetProvider"
+            android:icon="@drawable/novideopic">
+
+
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE2" />
+            </intent-filter>
+
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_baking_info" />
+
+        </receiver>
 
 
     </application>

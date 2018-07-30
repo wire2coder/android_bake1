@@ -19,12 +19,12 @@ public class MainActivity extends AppCompatActivity
         implements RecipeAdapter.ListItemClickListener {
 
 
-    // Espresso testing
+
+    // TODO: Expresso test
 //    @Nullable
 //    private SimpleIdlingResource mIdlingResource;
-//
-//
-//    // Espresso idling resources
+
+
 //    @VisibleForTesting
 //    @NonNull
 //    public IdlingResource getIdlingResource() {
@@ -42,10 +42,10 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Espresso testing
+
+        // TODO: Expresso test
 //        getIdlingResource();
     }
-
 
 
 

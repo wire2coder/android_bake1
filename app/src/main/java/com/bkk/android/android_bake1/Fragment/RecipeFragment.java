@@ -39,9 +39,9 @@ public class RecipeFragment extends Fragment {
 
         RecyclerView recipe_recycler;
 
-        final RecipeAdapter recipesAdapter = new RecipeAdapter((MainActivity)getActivity());
-        recipe_recycler = (RecyclerView) rootView.findViewById(R.id.recipe_recycler);
-        recipe_recycler.setAdapter(recipesAdapter);
+        final RecipeAdapter recipeAdapter = new RecipeAdapter((MainActivity)getActivity());
+        recipe_recycler = rootView.findViewById(R.id.recipe_recycler);
+        recipe_recycler.setAdapter(recipeAdapter);
 
         LinearLayoutManager mLayoutManager = new LinearLayoutManager(getContext());
         recipe_recycler.setLayoutManager(mLayoutManager);
@@ -50,6 +50,7 @@ public class RecipeFragment extends Fragment {
         Call< ArrayList<Recipe> > recipe = recipeInterface.getRecipe();
 
 
+        // TODO: Expresso test
 //        SimpleIdlingResource idlingResource = (SimpleIdlingResource)((MainActivity)getActivity()).getIdlingResource();
 //
 //        if (idlingResource != null) {
@@ -67,8 +68,9 @@ public class RecipeFragment extends Fragment {
                 Bundle bundle1 = new Bundle();
                 bundle1.putParcelableArrayList(ALL_RECIPES, al_recipe);
 
-                recipesAdapter.swapData(al_recipe,getContext());
+                recipeAdapter.swapData(al_recipe,getContext());
 
+                // TODO: Expresso test
 //                if (idlingResource != null) {
 //                    idlingResource.setIdleState(true);
 //                }

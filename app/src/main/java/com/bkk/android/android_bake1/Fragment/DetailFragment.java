@@ -15,6 +15,8 @@ import com.bkk.android.android_bake1.DetailActivity;
 import com.bkk.android.android_bake1.Model.Ingredient;
 import com.bkk.android.android_bake1.Model.Recipe;
 import com.bkk.android.android_bake1.R;
+import com.bkk.android.android_bake1.Util.KeyUtil;
+import com.bkk.android.android_bake1.WidgetStuff.UpdateBakingService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,8 +86,7 @@ public class DetailFragment extends Fragment {
         detailAdapter.swapData(al_recipe, getContext());
 
         // logic for updating the Widget
-        // TODO: widget
-//        UpdateBakingService.startBakingService( getContext(), al_ingredients_widget);
+        UpdateBakingService.startBakingService( getActivity(), al_ingredients_widget );
 
         return rootView;
     }
@@ -96,7 +97,7 @@ public class DetailFragment extends Fragment {
         super.onSaveInstanceState(currentState);
 
         currentState.putParcelableArrayList(SELECTED_RECIPES, al_recipe);
-        currentState.putString("Title", recipe_name);
+        currentState.putString(KeyUtil.TITLE, recipe_name);
     } // onSaveInstanceState()
 
 
