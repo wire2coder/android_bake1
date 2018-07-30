@@ -12,7 +12,6 @@
 
 
 
-    <!-- RecipeFragment -->
     <fragment
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:name="com.bkk.android.android_bake1.Fragment.RecipeFragment"
