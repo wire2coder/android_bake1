@@ -1,14 +1,18 @@
 package com.bkk.android.android_bake1.Adapter;
 
 import android.content.Context;
+import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bkk.android.android_bake1.Model.Recipe;
 import com.bkk.android.android_bake1.R;
+import com.bkk.android.android_bake1.Util.KeyUtil;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
@@ -60,6 +64,23 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecyclerVi
         String title = al_recipe.get(position).getName();
         holder.tv_title.setText( title );
 
+        // adding Picasso for requirement
+        String imageUrl1 = al_recipe.get(position).getImage();
+
+        if (imageUrl1 != "") {
+            Uri uri1 = Uri.parse(imageUrl1).buildUpon().build();
+
+            Picasso.with(mContext)
+                    .load(uri1)
+                    .into(holder.iv_recipe_pic);
+        } else {
+            Uri uri1 = Uri.parse(KeyUtil.SANDWHICH_URL).buildUpon().build();
+
+            Picasso.with(mContext)
+                    .load(uri1)
+                    .into(holder.iv_recipe_pic);
+        }
+
     }
 
 
@@ -70,13 +91,18 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.RecyclerVi
 
 
     class RecyclerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+
         TextView tv_title;
+
+        // adding Picasso for requirement
+        ImageView iv_recipe_pic;
 
 
         public RecyclerViewHolder(View itemView) {
             super(itemView);
 
             tv_title = itemView.findViewById(R.id.tv_title);
+            iv_recipe_pic = itemView.findViewById(R.id.iv_recipe_pic);
 
             itemView.setOnClickListener(this);
         }

@@ -27,6 +27,14 @@
         android:typeface="normal"
         card_view:fontFamily="serif" />
 
+    <!-- added for project requirement -->
+    <ImageView
+        android:id="@+id/iv_recipe_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@android:color/holo_green_dark"
+        />
+
 </RelativeLayout>
 
 </android.support.v7.widget.CardView>

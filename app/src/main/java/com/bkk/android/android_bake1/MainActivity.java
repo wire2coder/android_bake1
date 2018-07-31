@@ -1,11 +1,9 @@
 package com.bkk.android.android_bake1;
 
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.annotation.VisibleForTesting;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 
 import com.bkk.android.android_bake1.Adapter.RecipeAdapter;
 import com.bkk.android.android_bake1.Model.Recipe;
@@ -41,6 +39,14 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // adding Toolbar for requirement
+        Toolbar toolbar1 = findViewById(R.id.toolbar1);
+//        setSupportActionBar(toolbar1); << this line causes error
+//        getSupportActionBar().setHomeButtonEnabled(false);
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setTitle("Bake it For Me");
+        // TODO: here, july 31
 
 
         // TODO: Expresso test
