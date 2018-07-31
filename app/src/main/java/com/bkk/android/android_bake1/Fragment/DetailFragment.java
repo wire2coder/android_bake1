@@ -57,7 +57,7 @@ public class DetailFragment extends Fragment {
 //        recipe_name = al_recipe.get(0).getName();
 
         View rootView = inflater.inflate(R.layout.detail_fragment, container, false);
-        tv_recipe_detail = (TextView)rootView.findViewById(R.id.tv_recipe_detail);
+        tv_recipe_detail = rootView.findViewById(R.id.tv_recipe_detail);
 
 
 
@@ -75,7 +75,7 @@ public class DetailFragment extends Fragment {
 
 
         // Logic for user interface
-        rv_recipe_detail = (RecyclerView)rootView.findViewById(R.id.rv_recipe_detail);
+        rv_recipe_detail = rootView.findViewById(R.id.rv_recipe_detail);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         rv_recipe_detail.setLayoutManager(linearLayoutManager);

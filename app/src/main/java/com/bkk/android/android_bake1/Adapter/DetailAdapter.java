@@ -78,7 +78,7 @@ public class DetailAdapter extends RecyclerView.Adapter<DetailAdapter.RecyclerVi
         public RecyclerViewHolder(View itemView) {
             super(itemView);
 
-            tv_short_desc = (TextView) itemView.findViewById(R.id.tv_short_desc);
+            tv_short_desc = itemView.findViewById(R.id.tv_short_desc);
 
             itemView.setOnClickListener(this);
         }

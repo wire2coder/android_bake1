@@ -10,6 +10,7 @@
     android:padding="16dp">
 
 
+    <!-- ingredient measurements -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -24,6 +25,7 @@
 
     </ScrollView>
 
+    <!-- instruction on how to make the stuff -->
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_recipe_detail"
         android:layout_margin="15dp"

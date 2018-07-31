@@ -75,9 +75,9 @@ public class StepVideoFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.step_video_fragment, container, false);
 
         TextView tv_step_video_fragment;
-        tv_step_video_fragment = (TextView) rootView.findViewById(R.id.tv_step_video_fragment);
-        Button backButton = (Button) rootView.findViewById(R.id.previousStep);
-        Button nextButton = (Button) rootView.findViewById(R.id.nextStep);
+        tv_step_video_fragment = rootView.findViewById(R.id.tv_step_video_fragment);
+        Button backButton = rootView.findViewById(R.id.previousStep);
+        Button nextButton = rootView.findViewById(R.id.nextStep);
 
         mainHandler = new Handler();
         bandwidthMeter = new DefaultBandwidthMeter();
