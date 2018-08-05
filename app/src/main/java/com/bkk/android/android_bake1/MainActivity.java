@@ -40,13 +40,11 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // adding Toolbar for requirement
+        // adding Toolbar for requirement, don't forget to add toolbar in xml file
         Toolbar toolbar1 = findViewById(R.id.toolbar1);
-//        setSupportActionBar(toolbar1); << this line causes error
-//        getSupportActionBar().setHomeButtonEnabled(false);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(false);
-        getSupportActionBar().setTitle("Bake it For Me");
-        // TODO: here, july 31
+        setSupportActionBar(toolbar1);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(false); // this line show the back <- arrow
+        getSupportActionBar().setTitle("How to Bake");
 
 
         // TODO: Expresso test

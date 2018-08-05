@@ -15,4 +15,6 @@ public class KeyUtil {
 
     public static String SANDWHICH_URL = "https://en.wikipedia.org/wiki/Sandwich#/media/File:BLT_sandwich_on_toast.jpg";
 
+    public static String STACK_DETAIL_ACTIVITY = "stack_detail_activity";
+
 } // class KeyUtil
