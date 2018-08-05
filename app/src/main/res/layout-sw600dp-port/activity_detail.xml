@@ -17,6 +17,14 @@
     android:gravity="center_horizontal">
 
 
+    <!-- Toolbar, project requirement -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"

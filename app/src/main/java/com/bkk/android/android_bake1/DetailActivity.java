@@ -55,7 +55,7 @@ public class DetailActivity extends AppCompatActivity
             // NOT A VIDEO Player Fragment
             fragmentManager.beginTransaction()
                     .replace(R.id.detail_fragment, detailFragment)
-                    .addToBackStack(null)
+                    .addToBackStack(STACK_DETAIL_ACTIVITY)
                     .commit();
 
 
@@ -100,7 +100,10 @@ public class DetailActivity extends AppCompatActivity
                         if (fm1.getBackStackEntryCount() > 1) {
 
                             Toast.makeText(getApplication(), "if", Toast.LENGTH_SHORT).show();
-                            fm1.popBackStackImmediate(); // go to back DetailActivity
+//                            fm1.popBackStackImmediate();
+                            // go to back DetailActivity
+                            // marked the location with << .addToBackStack(STACK_DETAIL_ACTIVITY)
+                            fm1.popBackStack(STACK_DETAIL_ACTIVITY, 0);
 //                            finish();
                         }
                         else if(fm1.getBackStackEntryCount() > 0) {
@@ -111,7 +114,6 @@ public class DetailActivity extends AppCompatActivity
                     }
                     else {
 
-                        // TODO:
                         //go back to "MainActivity" screen
                         Toast.makeText(getApplication(), "else", Toast.LENGTH_SHORT).show();
 
@@ -154,15 +156,15 @@ public class DetailActivity extends AppCompatActivity
 
             fragmentManager.beginTransaction()
                     .replace(R.id.step_vid_fragment, stepVideoFragment)
-                    // TODO: debug
                     .addToBackStack(null) // for the Navigation bar
                     .commit();
 
-        } else { // phone mode
+        }
+        // phone mode
+        else {
 
             fragmentManager.beginTransaction()
                     .replace(R.id.detail_fragment, stepVideoFragment)
-                    // TODO: debug
                     .addToBackStack(null) // for the Navigation bar
                     .commit();
 
