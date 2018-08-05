@@ -12,6 +12,14 @@
 
 
 
+    <!-- Toolbar, project requirement -->
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+
     <fragment
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:name="com.bkk.android.android_bake1.Fragment.RecipeFragment"

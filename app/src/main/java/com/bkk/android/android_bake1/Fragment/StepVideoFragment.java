@@ -41,6 +41,7 @@ import java.util.List;
 import static com.bkk.android.android_bake1.Util.KeyUtil.SELECTED_INDEX;
 import static com.bkk.android.android_bake1.Util.KeyUtil.SELECTED_RECIPES;
 import static com.bkk.android.android_bake1.Util.KeyUtil.SELECTED_STEPS;
+import static com.bkk.android.android_bake1.Util.KeyUtil.TITLE;
 
 
 public class StepVideoFragment extends Fragment {
@@ -90,16 +91,16 @@ public class StepVideoFragment extends Fragment {
 
             al_steps = savedInstanceState.getParcelableArrayList(SELECTED_STEPS);
             selected_index = savedInstanceState.getInt(SELECTED_INDEX);
-            recipe_name = savedInstanceState.getString("Title");
+            recipe_name = savedInstanceState.getString(TITLE);
 
         } else {
 
             al_steps = getArguments().getParcelableArrayList(SELECTED_STEPS);
 
             if (al_steps != null) {
-                al_steps =getArguments().getParcelableArrayList(SELECTED_STEPS);
-                selected_index=getArguments().getInt(SELECTED_INDEX);
-                recipe_name=getArguments().getString("Title");
+                al_steps = getArguments().getParcelableArrayList(SELECTED_STEPS);
+                selected_index = getArguments().getInt(SELECTED_INDEX);
+                recipe_name = getArguments().getString(TITLE);
             } else {
                 al_recipes = getArguments().getParcelableArrayList(SELECTED_RECIPES);
                 al_steps = (ArrayList<Step>) al_recipes.get(0).getSteps();
@@ -290,7 +291,7 @@ public class StepVideoFragment extends Fragment {
 
         currentState.putParcelableArrayList(SELECTED_STEPS, al_steps);
         currentState.putInt(SELECTED_INDEX, selected_index);
-        currentState.putString(KeyUtil.TITLE, recipe_name);
+        currentState.putString(TITLE, recipe_name);
 
     } // onSaveInstanceState()
 

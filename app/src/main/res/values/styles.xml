@@ -9,6 +9,7 @@
 
         <!--these 2 lines below are needed -->
         <!--https://stackoverflow.com/questions/26515058/this-activity-already-has-an-action-bar-supplied-by-the-window-decor-->
+        <!-- here -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
