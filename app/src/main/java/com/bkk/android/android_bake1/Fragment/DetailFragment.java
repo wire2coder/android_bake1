@@ -70,7 +70,7 @@ public class DetailFragment extends Fragment {
             tv_recipe_detail.append(ingredient + "\n" + quantity + " " + measurement + "\n\n");
 
             // Adding data for Widget
-            al_ingredients_widget.add(ingredient + "\n" + quantity + " " + measurement + "\n\n");
+            al_ingredients_widget.add(ingredient + "\n" + quantity + " " + measurement + "\n");
         }
 
 

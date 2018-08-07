@@ -24,5 +24,11 @@ public class KeyUtil {
     public static String VIDEO_URL = "vidoe_url";
     public static String PLAYBACK_READY = "playback_ready";
 
+    // Automated Testing
+    public static String NUTELLA_PIE = "Nutella Pie";
+    public static String BROWNIES = "Brownies";
+    public static String YELLOW_CAKE = "Yellow Cake";
+    public static String CHEESECAKE = "Cheesecake";
+
 
 } // class KeyUtil

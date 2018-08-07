@@ -14,6 +14,4 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <string name="widget_text">Launch the Application</string>
-
 </resources>
